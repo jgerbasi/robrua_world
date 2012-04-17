@@ -1,5 +1,21 @@
 <p id="notice"><%= notice %></p>
+<legend>Comment Details</legend>
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Active</th>
+  </tr>
 
+  <tr>
+    <td><%= @comment.content %></td>
+    <td><%= @comment.name %></td>
+    <td><%= @comment.email %></td>
+    <td><%= @comment.active %></td>
+  </tr>
+</table>
 
+<br />
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>

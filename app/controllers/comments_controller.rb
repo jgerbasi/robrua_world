@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
 
 
   def create
-    @comment = Comment.new(params[:category])
+    @comment = Comment.new(params[:comment])
     if @comment.save
       flash[:notice] = 'Comment was successfully created.'
       redirect_to comment_path(@comment)
