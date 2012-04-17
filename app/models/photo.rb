@@ -4,6 +4,7 @@ class Photo < ActiveRecord::Base
   
   # Relationships
   belongs_to :category
+  has_many :comments
   
   # Validations
   validates_presence_of :caption

@@ -1,4 +1,6 @@
 class Comment < ActiveRecord::Base
+	belongs_to :article
+	belongs_to :photo
 
 	# Validations
 	validates_presence_of :content, :name, :email
