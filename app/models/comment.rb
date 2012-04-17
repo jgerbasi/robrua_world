@@ -1,6 +1,6 @@
 class Comment < ActiveRecord::Base
-	belongs_to :article
-	belongs_to :photo
+	belongs_to :commentable, :polymorphic => true
+	belongs_to :commentable, :polymorphic => true
 
 	# Validations
 	validates_presence_of :content, :name, :email
